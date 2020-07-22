@@ -286,8 +286,6 @@ extension CBOR {
             return (any as! Double).encode()
         case is Bool:
             return (any as! Bool).encode()
-        case is [UInt8]:
-            return CBOR.encodeByteString(any as! [UInt8])
         #if canImport(Foundation)
         case is Data:
             return CBOR.encodeByteString((any as! Data).map { $0 })
